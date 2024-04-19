@@ -11,10 +11,13 @@ fastapi = "^0.110.2"
 pydantic = "^2.7.0"
 llama-index = "^0.10.30"
 uvicorn = "^0.29.0"
+arxiv-public-data = {git = "https://github.com/mattbierbaum/arxiv-public-datasets", develop = true}
+python-dotenv = "^1.0.1"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.1.1"
 pytest-mock = "^3.14.0"
+ruff = "^0.4.0"
 
 [build-system]
 requires = ["poetry-core"]
