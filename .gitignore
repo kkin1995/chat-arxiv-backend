@@ -174,4 +174,5 @@ poetry.toml
 pyrightconfig.json
 
 data/raw/
+data/arxiv-data
 # End of https://www.toptal.com/developers/gitignore/api/python
