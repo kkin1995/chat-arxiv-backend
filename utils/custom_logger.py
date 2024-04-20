@@ -2,7 +2,8 @@ import logging
 from datetime import datetime
 import os
 import sys
-
+from dotenv import load_dotenv
+load_dotenv()
 
 class DynamicPathFileHandler(logging.FileHandler):
     def __init__(
@@ -43,6 +44,8 @@ class DynamicPathFileHandler(logging.FileHandler):
 
 def setup_logger(name=__name__):
     LOG_DIR = os.environ.get("LOG_DIR")
+    if LOG_DIR is None:
+        raise ValueError("LOG_DIR is not set")
     logger = logging.getLogger(name)
     logger.setLevel(logging.INFO)
 

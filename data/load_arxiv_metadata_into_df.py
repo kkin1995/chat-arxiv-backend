@@ -4,7 +4,7 @@ import gzip
 from dotenv import load_dotenv
 import os
 from utils.custom_logger import setup_logger
-
+print(__name__)
 logger = setup_logger(__name__)
 
 load_dotenv()
